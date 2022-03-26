@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; 
+    padding: 10px;
+    background: linear-gradient(to bottom, #ea689a 0%,#769164 100%);
+    background-position: center;
+}
+#tdlist{
+    color:#fff;
+    padding: 20px;
+    width :600px;
+    margin: 0 auto;
+    height: auto;
+}
+#tdlist .heading
+{
+    margin-bottom: 30px;
+    text-align: center;
+}
+#tdlist  > .heading > h2{
+display: inline-block;
+position:relative;
+text-transform: uppercase;
+font-size: 2.5rem;
+}
+#tdlist  > .heading > h2::before{
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    margin: 0 auto;
+    bottom: 0;
+    width: 10%;
+    height: 2px;
+    background-color: #ea689a;
+    transition: .5s;
+}
+#tdlist  > .heading > h2:hover::before{
+    width: 70%;
+}
+#tdlist > .todo-input{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    margin-bottom:50px ;
+}
+#tdlist > .todo-input > .todo_in{
+    width: 100%;
+    height: 40px;
+    padding: 0 0 0 10px;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+#tdlist > .todo-input > .add-item
+{
+    position: absolute;
+    right: 0;
+    top:50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color:rgb(255, 127, 8);
+
+    line-height: 40px;
+    color:snow;
+    cursor: pointer;
+}
+#tdlist > .todo-input > .add-item:nth-child(2){
+    right: 40px;
+    background-color: rgb(15, 248, 217);
+}
+
+#tdlist > .tdo-lst-container{
+    list-style: none;
+    margin: 10px 0 0;
+}
+#tdlist > .tdo-lst-container .tdo-lst{
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    overflow:hidden;
+} 
+#tdlist > .tdo-lst-container .tdo-lst .tdo-item{
+    width: 100%;
+    background-color: white;
+    color: black;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+#tdlist > .tdo-lst-container .tdo-lst .button{
+    position: absolute;
+    right: 0;
+}
+#tdlist > .tdo-lst-container .tdo-lst .button button{
+    width: 40px;
+    height: 50px;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+#tdlist > .tdo-lst-container .tdo-lst .button .completed{
+    background-color: #0bf551;
+
+}
+#tdlist > .tdo-lst-container .tdo-lst .button .trash{
+    background-color: #e910a8;
+}
+
+#tdlist> .tdo-lst-container .tdo-lst .button button i{
+    pointer-events: none;
+}
+.fall{
+    opacity: 0 !important;
+    transform: translateY(30px);
+    transition: .5s;
+}
+.line_through{
+    text-decoration: line-through;
+    opacity: 0.7;
+    transition: .3s;
+}
+.editBtn{
+    background-color: rgb(225, 240, 12);
+}
+@media screen and(max-width:600px){
+    #tdlist{
+        width:100%
+    }
+    
+}
